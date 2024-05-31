@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="public/images/css/materialize.css" media="screen,projection" />
 </head>
 
 <body>
@@ -18,7 +18,7 @@
                 <h1>{{user.fullName}}</h1><br>
             </div>
             <div class="col s12 m12 l6">
-                <img src="/images/{{user.photo}}" alt="Cape Town" width="50%"><br>
+                <img src="{{user.photo}}" alt="Cape Town" width="50%"><br>
             </div>
         </div>
     </div>
@@ -72,7 +72,8 @@
                 <h4>{{this.name}}</h4><br>
                 <div class="row">
                     <div class="col l6 s6 m6">
-                        {{this.description}}<br>
+                        <li>{{this.description_line1}}</li><br>
+                        <li>{{this.description_line2}}</li><br>
                     </div>
                     <div class="col l6 s6 m6">
                         <img src="{{this.photo}}" width="75%"><br><br>
@@ -84,7 +85,7 @@
         </div>
     </div>
 
-    
+
     <div class="container">
         <div class="divider"></div>
         <h3>Historical places in my city</h3><br>
@@ -94,23 +95,27 @@
                 <h4>{{this.name}}</h4><br>
                 <div class="row">
                     <div class=" col l6 s6 m6">
-                        <ul>
-                            <li>{{this.interest_line1}}</li><br>
-                            <li>{{this.interest_line2}}</li><br>
-                            <li>{{this.interest_line3}}</li><br>
-                        </ul>
+
+                        <li>{{this.interest_line1}}</li><br>
+                        <li>{{this.interest_line2}}</li><br>
+                        <li>{{this.interest_line3}}</li><br>
+
                     </div>
                     <div class="col l6 s6 m6">
                         <img src="/images/{{this.photo}}" width="75%"><br>
                     </div>
 
                 </div>
-               
+
             </div>
             {{/each}}
 
         </div>
     </div>
+
+
+
+
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
 </body>
